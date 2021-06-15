@@ -2,7 +2,7 @@ import hobbyReducer from "./hobby";
 import { combineReducers } from "redux";
 import  useReducer from "./user";
 
-const rootReducer = () => combineReducers({
+const rootReducer = combineReducers({
     hobby: hobbyReducer,
     user: useReducer,
 });
