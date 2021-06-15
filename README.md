@@ -18,3 +18,5 @@
 3. Connect to redux store from component
 
 - Using the two hooks hehee 🎉
+
+This readme is copied from repo: https://github.com/paulnguyen-mn/redux-in-reactjs/blob/master/README.md
