@@ -36,7 +36,9 @@ function Homepage(props) {
         <div className="home-page">
             <h1>REDUX-HOOKS Home-page!</h1>
             <button onClick={handleAddHobbyClick}>Random</button>
-            <HobbyList hobbylist={hobbyList}/>
+            <HobbyList 
+            hobbylist={hobbyList}
+            activeid={activeId}/>
         </div>
     );
 }
