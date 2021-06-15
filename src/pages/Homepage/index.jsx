@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import HobbyList from '../../components/Home/HobbyList';
-import { addNewHobby } from '../../actions/hobby';
+import { addNewHobby, setActiveHobby } from '../../actions/hobby';
 
 Homepage.propTypes = {
     
@@ -32,13 +32,20 @@ function Homepage(props) {
         dispatch(action);
     }
 
+    const handleHobbyClick = (hobby) => {
+        const action = setActiveHobby(hobby);
+        dispatch(action);
+    }
+
     return (
         <div className="home-page">
             <h1>REDUX-HOOKS Home-page!</h1>
             <button onClick={handleAddHobbyClick}>Random</button>
             <HobbyList 
-            hobbylist={hobbyList}
-            activeid={activeId}/>
+                hobbylist={hobbyList}
+                activeid={activeId}
+                onHobbyClick={handleHobbyClick}
+            />
         </div>
     );
 }
