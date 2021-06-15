@@ -1,8 +1,8 @@
 
 const initialState = {
     list: [],
-    activeId: null
-};
+    activeId: null,
+}
 
 const hobbyReducer = (state = initialState, action) =>{
     switch(action.type){
